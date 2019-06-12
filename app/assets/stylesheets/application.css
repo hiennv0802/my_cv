@@ -1,0 +1,53 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require bootstrap.min
+ *= require_self
+ */
+
+.user-avatar {
+  width: 250px;
+  height: 400px;
+}
+
+.edu-year {
+  text-align: center;
+  padding: 20px 0;
+  border: 1px solid grey;
+  border-radius: 45px;
+  width: 90px;
+  height: 91px;
+}
+.table-vertical-align-middle {
+  width: 80% !important;
+  tr {
+    height: 125px;
+  }
+}
+.certification_logo {
+  width: 30%;
+  min-width: 100px;
+  max-width: 250px;
+}
+.table-vertical-align-middle th {
+  vertical-align: middle !important;
+}
+.edu-year hr {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.favorite {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

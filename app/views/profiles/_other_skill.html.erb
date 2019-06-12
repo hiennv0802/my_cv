@@ -1,0 +1,7 @@
+<div class="row">
+  <% @data["other_skills"].split(",").each do |skill| %>
+    <div class="col-sm-3" v-for="skill in otherSkillArr(otherSkillInfo)">
+      <h5 class="text-left">- <%= skill %></h5>
+    </div>
+  <% end %>
+</div>

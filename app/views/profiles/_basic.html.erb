@@ -1,0 +1,28 @@
+<div class="col-md-12">
+  <h2 class="text-center">NGUYEN VAN HIEN</h2><br/>
+  <p class="text-center">Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning.</p>
+</div>
+<div class="row">
+  <div class="col-md-5">
+    <img src="../assets/user-avatar.png" class="user-avatar">
+  </div>
+  <div class="col-md-7">
+    <table class="table">
+      <% @data["basic-info"].each do |info| %>
+        <tr>
+          <td><%= info["name"] %></td>
+          <td>
+            <% if info["name"] != "Facebook" && info["name"] != "Github" %>
+              <span><%= info["value"] %></span>
+            <% else %>
+              <span><%= info["value"] %></span>
+              <a href="{{info['value']}}" target="_blank">
+                <%= info['value'] %>
+              </a>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
