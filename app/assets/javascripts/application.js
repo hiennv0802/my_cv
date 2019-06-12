@@ -13,4 +13,34 @@
 //= require rails-ujs
 //= require activestorage
 //= require Chart.min
+//= require jquery.min
 //= require_tree .
+
+$(function() {
+  var chartjs = $("#myChart");
+  var marksData = {
+    labels: chartjs.data("labels"),
+    datasets: [{
+      label: "My skills",
+      backgroundColor: ["rgba(255, 99, 132, 0.2)"],
+      borderColor: ["rgba(255, 99, 132, 1)"],
+      borderWidth: 2,
+      data: chartjs.data("skill"),
+      fill: true
+    }]
+  };
+  var radarChart = new Chart(chartjs, {
+    type: "radar",
+    data: marksData,
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    },
+    bind: true
+  });
+});

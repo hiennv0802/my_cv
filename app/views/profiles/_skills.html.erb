@@ -1,1 +1,7 @@
-<%= radar_chart chart_data(@data["skills"]), {} %>
+<div class="row chart-container">
+  <div class="col-md-8 col-md-offset-2">
+    <canvas id="myChart" width="400" height="400"
+      data-labels="<%= @data['skills'].keys %>" data-skill="<%= @data['skills'].values %>">
+    </canvas>
+  </div>
+</div>
