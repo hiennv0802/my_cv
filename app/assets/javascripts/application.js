@@ -18,6 +18,24 @@
 
 $(function() {
   var chartjs = $("#myChart");
+  const radarOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    legend: {
+      display: false
+    },
+    tooltips: {
+      enabled: false
+    },
+    scale: {
+      ticks: {
+        beginAtZero: true,
+      },
+      pointLabels: {
+        fontSize: 16
+      }
+    }
+  };
   var marksData = {
     labels: chartjs.data("labels"),
     datasets: [{
@@ -32,15 +50,7 @@ $(function() {
   var radarChart = new Chart(chartjs, {
     type: "radar",
     data: marksData,
-    options: {
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true
-          }
-        }]
-      }
-    },
+    options: radarOptions,
     bind: true
   });
 });
