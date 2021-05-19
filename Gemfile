@@ -5,7 +5,7 @@ ruby "2.5.1"
 
 gem "rails", "~> 5.2.3"
 gem "mysql2", ">= 0.3.18", "< 0.5"
-gem "puma", "~> 3.11"
+gem "puma", "~> 4.3"
 gem "sass-rails", "~> 5.0.4"
 
 # Reduces boot times through caching; required in config/boot.rb
